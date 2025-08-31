@@ -9,6 +9,49 @@
         <script defer src="script.js"></script>
         <div class="container">
             <h2>집에서 만드는 컴파일러</h2>
+            <div id="BNF">
+                <h3>BNF 표현식</h3>
+                <div id="BNF_code" class="textbox">
+                    <span style="color: lightgreen">
+                        stmts -> stmt;stmts |<br>
+                        stmts -> stmt<br>
+                        stmt -> id[bool] <- bool |<br>
+                        stmt -> id <- bool |<br>
+                        stmt -> if (bool) stmt |<br>
+                        stmt -> if (bool) stmt else stmt |<br>
+                        stmt -> {stmts} |<br>
+                        stmt -> while (bool) stmt |<br>
+                        stmt -> decl id |<br>
+                        stmt -> decl id[num] |<br>
+                        stmt -> ε | <br>
+                        bool -> join "|" bool |<br>
+                        bool -> join<br>
+                        join -> equality & join |<br>
+                        join -> equality<br>
+                        equality -> rel "==" equality |<br>
+                        equality -> rel "!=" equality |<br>
+                        equality -> rel<br>
+                        rel -> expr < rel |<br>
+                        rel -> expr > rel |<br>
+                        rel -> expr <= rel |<br>
+                        rel -> expr >= rel |<br>
+                        rel -> expr<br>
+                        expr -> term + expr |<br>
+                        expr -> term - expr |<br>
+                        expr -> term<br>
+                        term -> unary * term |<br>
+                        term -> unary / term |<br>
+                        term -> unary<br>
+                        unary -> !primary |<br>
+                        unary -> -primary |<br>
+                        unary -> primary<br>
+                        primary -> (bool) |<br>
+                        primary -> num |<br>
+                        primary -> id |<br>
+                        primary -> id[num]<br>
+                    </span>
+                </div>
+            </div>
             <div id="source">
                 <h3>소스 코드</h3>
                 <div id="source_code" contenteditable="true" class="textbox"></div>
