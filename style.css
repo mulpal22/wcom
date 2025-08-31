@@ -1,0 +1,36 @@
+body {
+    font-family: Consolas;
+    background-color: #1e1e1e;
+    color: #eeeeee;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.textbox {
+    height: 300px;
+    border-color: #eeeeee;
+    margin: auto;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow-x: hidden;
+    overflow: scroll;
+}
+
+#compile_btn {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

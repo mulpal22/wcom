@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"></link>
+    </head>
+    <body>
+        <script defer src="script.js"></script>
+        <div class="container">
+            <h2>집에서 만드는 컴파일러</h2>
+            <div id="source">
+                <h3>소스 코드</h3>
+                <div id="source_code" contenteditable="true" class="textbox"></div>
+            </div>
+            <form id="form">
+                <div type="button" id="compile_btn">컴파일</div>
+            </form>
+            <div id="token">
+                <h3>토큰</h3>
+                <div id="token_code" class="textbox"></div>
+            </div>
+            <div id="ast">
+                <h3>AST</h3>
+                <div id="ast_code" class="textbox"></div>
+            </div>
+            <div id="ir">
+                <h3>중간코드</h3>
+                <div id="ir_code" class="textbox"></div>
+            </div>
+            <div id="symbol_table">
+                <h3>심볼 테이블</h3>
+                <div id="symbol_table_code" class="textbox"></div>
+            </div>
+        </div>
+    </body>
+</html>
