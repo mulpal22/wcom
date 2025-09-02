@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Hack_ttf";
-    src: url(Hack-Regular.ttf);
+    src: url(Hack-Regular.ttf) format("truetype");
 }
 
 body {
