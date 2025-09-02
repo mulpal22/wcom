@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css"></link>
+        <title>집에서 만드는 컴파일러</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <script defer src="script.js"></script>
@@ -12,7 +13,7 @@
             <div id="BNF">
                 <h3>BNF 표현식</h3>
                 <div id="BNF_code" class="textbox">
-                    <span style="color: lightgreen">
+                    <span style="color: #51b9ff">
                         stmts -> stmt;stmts |<br>
                         stmts -> stmt<br>
                         stmt -> id[bool] <- bool |<br>
@@ -23,13 +24,13 @@
                         stmt -> while (bool) stmt |<br>
                         stmt -> decl id |<br>
                         stmt -> decl id[num] |<br>
-                        stmt -> ε | <br>
+                        stmt -> ε <br>
                         bool -> join "|" bool |<br>
                         bool -> join<br>
                         join -> equality & join |<br>
                         join -> equality<br>
-                        equality -> rel "==" equality |<br>
-                        equality -> rel "!=" equality |<br>
+                        equality -> rel == equality |<br>
+                        equality -> rel != equality |<br>
                         equality -> rel<br>
                         rel -> expr < rel |<br>
                         rel -> expr > rel |<br>
@@ -56,9 +57,7 @@
                 <h3>소스 코드</h3>
                 <div id="source_code" contenteditable="true" class="textbox"></div>
             </div>
-            <form id="form">
-                <div type="button" id="compile_btn">컴파일</div>
-            </form>
+            <button type="button" id="compile_btn">컴파일</button>
             <div id="token">
                 <h3>토큰</h3>
                 <div id="token_code" class="textbox"></div>
@@ -74,6 +73,10 @@
             <div id="symbol_table">
                 <h3>심볼 테이블</h3>
                 <div id="symbol_table_code" class="textbox"></div>
+            </div>
+            <div id="credit">
+                <img src="github.png" style="height: 50px; margin-right: 12px;"/>
+                <a style="line-height: 50px; color: #eeeeee" href="https://github.com/munpal2">https://github.com/munpal2</a>
             </div>
         </div>
     </body>
